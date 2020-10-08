@@ -1,32 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
-</style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 * {
     box-sizing: border-box;
-
 }
-a,button {
-     transition: all .3s ease-in-out;
+a, button {
+    transition: all .3s ease-in-out 
 }
 a {
     text-decoration: none;
 }
 body {
-    font-size: 400 22px 'Poppins', sans-serif;
-    color: #444444;
+    font: 400 22px 'Poppins', sans-serif;
+    color: #444; 
+    line-height: 1.6;
 }
 .container {
-     max-width: 1170px;
-     padding: 0 15px;
-     margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
 .box {
     padding: 90px 0;
-    outline: 1px solid orange;
 }
-
-.box-padding-lg {
-    padding: 140px 0;
-
+.box--padding-lg {
+    padding: 90px 0;
 }
 .box--bg-pink {
     background-color: #ffe9eb;
@@ -35,10 +31,11 @@ body {
     background-color: #eeeeee;
 }
 .box--bg-gradient {
-    background-image: linear-gradient( to bottom, #333399 50%, #fd00cb 100%);
+    background-image: linear-gradient(to bottom, #333399 50%, #fe00cc 100%);
+    color: #fff;
 }
 h1, h2 {
-    font-size:62px ;
+    font-size: 62px;
 }
 h3 {
     font-size: 36px;
@@ -50,8 +47,11 @@ h5 {
     font-size: 24px;
 }
 header {
-    color: #ffffff;
-    background-color: lightblue;
+    color: #fff;
+    position: absolute;/*Запихать картинку под хедер*/
+    top: 0; /*Тоже пихаем*/
+    left: 0; /*Тоже пихаем*/
+    right: 0; /*Тоже пихаем*/
 }
 header a {
     color: inherit;
@@ -63,19 +63,17 @@ header a {
 .logo:hover,
 .logo:focus,
 .logo:active {
-    color: #e71cb4;
+    color: #e71cb4
 }
 nav ul {
     padding: 0;
 }
-
-nav ul li  {
-   margin-left: 25px;
+nav ul li {
     display: inline-block;
+    margin-left: 25px;
 }
-
 nav ul li a {
-    padding: 5px;
+    padding: 5px 0; 
     font-weight: 700;
     font-size: 16px;
     border-bottom: 2px solid transparent;
@@ -86,10 +84,164 @@ nav ul li a:active {
     color: #e71cb4;
     border-color: #e71cb4;
 }
-
-header .container {
+header .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-]
+.hero {
+    min-height: 100vh;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;/* Заролнит блок, не будет места без картинки*/
+    background-image: url(../img/hero.jpg);
+}
+.hero__title {
+    margin-bottom: 30px;
+}
+.hero__text {
+    font-size: 30px;
+    margin-bottom: 70px;
+}
+.btn {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #e71cb4;
+    border: 2px solid #e71cb4;
+    border-radius: 5px;
+    padding: 15px 45px;
+    display: inline-block;
+}
+.btn--lg {
+    font-size: 22px;
+    padding: 25px 80px;
+}
+.btn:hover,
+.btn:focus,
+.btn:active {
+    color: #e71cb4;
+    background-color: #fff;
+}
+.btn--transparent {
+    background-color: transparent;
+    border-color: #fff;
+}
+.btn--transparent:hover,
+.btn--transparent:focus,
+.btn--transparent:active {
+    color: #222;
+}
+.text-purple {
+    color: #e71cb4;
+}
+.text-yellow {
+    color: #ffde16;
+}
+.text-salmon {
+    color: #ffbd9e;
+}
+.text-blue {
+    color: #20c9e0;
+}
+.text-green {
+    color: #2eac66;
+}
+.text-lg {
+    font-size: 32px;
+    
+}
+
+.text-sm {
+    font-size: 14px;
+    margin: 40px 0;
+}
+.course {
+    padding: 25px 0;
+    list-style: none;
+    font-size: 24px;
+    font-weight: 500;
+    column-count: 2;
+    column-gap: 30px;
+}
+
+.course li {
+    display: flex;
+    padding: 25px 0;
+}
+
+.course__index > i {
+    margin-right: 25px;
+}
+
+
+.course__index {
+    font-size: 44px;
+    font-weight: 700;
+    display: inline-block;
+    padding: 0 25px;
+    line-height: 1.2;
+    flex: 0 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.people {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.person{
+    padding: 20px 60px;
+    text-align: center;
+    max-width: 33%;
+}
+
+.person--padding-sm {
+    padding: 20px;
+}
+
+.person__img{
+    width: 100%;
+    padding-top:100%;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.person__img--round {
+    border-radius: 50%;
+}
+
+.person__img img {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.person__name{
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+.person__text{
+    font-size: 16px;
+}
